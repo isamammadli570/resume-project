@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Track Your Applications & Resume Ratings!",
+    "description": "Review your submission and check AI-powered feedback."
+  },
+  "navbar": {
+    "home": "Home",
+    "upload": "Upload resume"
+  }
+}

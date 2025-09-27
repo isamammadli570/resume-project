@@ -5,6 +5,7 @@ import ResumeCard from "~/components/ResumeCard";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
+import { useTranslation } from "react-i18next";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,6 +17,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const { auth } = usePuterStore();
   const navigate = useNavigate();
+  const {t} = useTranslation()
 
   useEffect(() => {
     if (!auth.isAuthenticated) navigate(`/auth?next=/`);
@@ -27,8 +29,8 @@ export default function Home() {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1>Track Your Applications & Resume Ratings!</h1>
-          <h2>Review your submission and check AI-powered feedback.</h2>
+          <h1>{t('home.title')}</h1>
+          <h2>{t('home.description')}</h2>
         </div>
 
         {resumes.length > 0 && (
