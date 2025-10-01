@@ -29,11 +29,11 @@ function Navbar() {
 
           {open && (
             <div
-              className="absolute top-full mt-2 w-32 bg-white shadow-md rounded-lg border border-gray-200 z-50"
+              className="absolute top-full mt-2  bg-white shadow-md rounded-lg border border-gray-200 z-50"
               onMouseLeave={() => setOpen(false)}
             >
               <button
-                className={`block w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                className={`block w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-lg  ${
                   currentLang === "az" ? "font-bold" : ""
                 }`}
                 onClick={() => changeLanguage("az")}
@@ -41,7 +41,7 @@ function Navbar() {
                 AZ
               </button>
               <button
-                className={`block w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                className={`block w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-lg  ${
                   currentLang === "en" ? "font-bold" : ""
                 }`}
                 onClick={() => changeLanguage("en")}

@@ -6,8 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import './lib/i18n';
 import type { Route } from "./+types/root";
+import './lib/i18n';
 import "./app.css";
 import { usePuterStore } from "./lib/puter";
 import { useEffect } from "react";
